@@ -22,9 +22,10 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField 'String', "themoviedb_apikey", themoviedb_apikey
         }
         debug {
-
+            buildConfigField 'String', "themoviedb_apikey", themoviedb_apikey
         }
     }
     compileOptions {
@@ -62,6 +63,9 @@ dependencies {
 
     // Kotlin
     implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.2.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0'
 
     //Retrofit
     implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
