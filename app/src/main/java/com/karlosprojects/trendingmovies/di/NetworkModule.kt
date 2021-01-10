@@ -1,5 +1,6 @@
-package com.karlosprojects.trendingmovies.network
+package com.karlosprojects.trendingmovies.di
 
+import com.karlosprojects.trendingmovies.network.MovieService
 import com.squareup.moshi.Moshi
 import dagger.Module
 import dagger.Provides
